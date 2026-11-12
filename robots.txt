@@ -1,5 +1,6 @@
+# Allow search engines and AI search/answer crawlers to index product info
 User-agent: *
 Allow: /
 
+# LLM summary: https://apadev232228-commits.github.io/BabyMonitor/llms.txt
 Sitemap: https://apadev232228-commits.github.io/BabyMonitor/sitemap.xml
-

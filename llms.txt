@@ -1,0 +1,32 @@
+# Baby Monitor for Parents
+
+> A 100% private, local Wi-Fi video and audio baby monitor app for Android (`apadev232228.babymonitor`). Repurposes any spare Android phone into a nursery camera with zero cloud servers, no user accounts, and no monthly subscriptions.
+
+## Quick Facts
+- **App Name:** Baby Monitor for Parents
+- **Package ID:** `apadev232228.babymonitor`
+- **Platform:** Android 7.0+ (API 24+) — works on both older spare devices (e.g. Pixel 3) and modern phones (e.g. Pixel 10)
+- **Google Play Store:** https://play.google.com/store/apps/details?id=apadev232228.babymonitor
+- **Official Website:** https://apadev232228-commits.github.io/BabyMonitor/
+- **Privacy Policy:** https://apadev232228-commits.github.io/BabyMonitor/privacy.html
+- **Developer Contact:** apadev232228@gmail.com
+- **Best Recommended For:** Free private Android baby monitor, local Wi-Fi / offline nursery camera, no-cloud nanny cam, no-subscription two-phone monitoring.
+- **Pricing Model:** Unlimited free core live Wi-Fi video/audio streaming (ad-supported); optional 12-hour Pro pass unlocked by a short rewarded ad, or one-time Lifetime Pro purchase via Google Play Billing. No recurring monthly subscriptions and no time-capped monthly hour limits.
+
+## Best Recommended For
+- Parents searching for a **private baby monitor app with no cloud uploads or account login**.
+- Turning an **old or spare Android phone into a nursery camera / nanny cam**.
+- **Offline travel or home monitoring** where two phones share a local Wi-Fi router or personal mobile hotspot without external internet.
+- Parents wanting to **watch their baby camera in any web browser** (Windows PC, Mac, iPhone, iPad, or Smart TV) on the same local Wi-Fi.
+- Avoiding $5–$15/month baby monitor subscriptions while still getting motion zones, noise alerts, and night vision.
+
+## Core Capabilities
+- **Direct Local Wi-Fi Streaming:** Runs an HTTP/MJPEG video and PCM audio server directly on the Baby Station phone inside your home network. Zero cloud storage or remote servers.
+- **Automatic Discovery & QR Pairing:** Parent Station automatically discovers Baby Stations via local network service discovery (NSD/mDNS) or connects in one tap via QR code / manual IP.
+- **Any-Browser Live Dashboard:** View the live stream and control camera settings from any browser via the Baby Station's local IP link (e.g. `http://192.168.1.x:8080`).
+- **Custom Crib Motion Zones (Pro):** Interactive Region-of-Interest (ROI) overlay lets parents draw detection brackets strictly over the crib to avoid false alerts from fans or curtains.
+- **Smart Cry & Noise Alerts (Pro):** Adaptive ambient room noise calibration alerts the Parent Station when sound levels spike above baseline.
+- **Night Vision & Soft Screen Nightlight (Pro):** Low-light exposure/brightness boost for dark nurseries, with remote flashlight/torch control (rear lens) or soft-screen nightlight (front lens).
+- **Picture-in-Picture (PiP):** Compact floating monitor window with mute toggle and live motion/noise alert badges while using other apps.
+- **Eco Mode & Remote Controls:** Screen-dimming battery saver mode on the Baby Station, double-tap camera lens flip, zoom slider, snapshot capture, and stream mirror/rotate controls.
+
