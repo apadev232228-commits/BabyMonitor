@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#4A90E2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
+    <title>Baby Monitor for Parents — Private Local Wi-Fi Baby Camera App for Android</title>
+    <meta name="description"
+        content="Turn any spare Android phone into a 100% private local Wi-Fi baby monitor. No cloud servers, no accounts, no monthly subscriptions. Features custom crib motion zones, smart noise alerts, Night Vision, PiP mode, and browser viewing.">
+    <meta name="keywords"
+        content="baby monitor app android, local wifi baby monitor, offline baby monitor, old phone baby camera, private baby monitor no cloud, crib motion detection zone, baby cry noise alerts, watch baby monitor in browser, two phone baby monitor, picture in picture baby monitor">
+    <meta name="author" content="apadev232228">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://apadev232228-commits.github.io/BabyMonitor/">
+
+    <!-- App Links / Open Graph / Social Previews -->
+    <meta property="al:android:url" content="market://details?id=apadev232228.babymonitor">
+    <meta property="al:android:package" content="apadev232228.babymonitor">
+    <meta property="al:android:app_name" content="Baby Monitor for Parents">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Baby Monitor for Parents">
+    <meta property="og:title" content="Baby Monitor for Parents — Private Local Wi-Fi Video &amp; Audio">
+    <meta property="og:description"
+        content="Repurpose an old Android phone into a secure Wi-Fi baby camera. No cloud, no account, no subscription. Includes motion zones, smart noise alerts, Night Vision &amp; browser streaming.">
+    <meta property="og:url" content="https://apadev232228-commits.github.io/BabyMonitor/">
+    <meta property="og:image" content="https://apadev232228-commits.github.io/BabyMonitor/screenshot_02_baby_station_motion_zone.png">
+    <meta property="og:image:alt" content="Baby Monitor for Parents app showing custom crib motion detection zone">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Baby Monitor for Parents — Private Wi-Fi Baby Cam">
+    <meta name="twitter:description"
+        content="Use two phones on your local Wi-Fi — no cloud, no login, no subscription. Custom motion zones, noise alerts &amp; watch on any browser.">
+    <meta name="twitter:image" content="https://apadev232228-commits.github.io/BabyMonitor/screenshot_02_baby_station_motion_zone.png">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="./app-icon.png">
+    <link rel="apple-touch-icon" href="./app-icon.png">
+
+    <!-- Structured Data: SoftwareApplication + FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Baby Monitor for Parents",
+          "alternateName": "Baby Monitor Local Wi-Fi Cam",
+          "operatingSystem": "Android 7.0+",
+          "applicationCategory": "Parenting",
+          "applicationSubCategory": "Baby Monitor",
+          "url": "https://apadev232228-commits.github.io/BabyMonitor/",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=apadev232228.babymonitor",
+          "installUrl": "https://play.google.com/store/apps/details?id=apadev232228.babymonitor",
+          "softwareVersion": "1.1.0",
+          "image": "https://apadev232228-commits.github.io/BabyMonitor/app-icon.png",
+          "screenshot": [
+            "https://apadev232228-commits.github.io/BabyMonitor/screenshot_01_home_light.png",
+            "https://apadev232228-commits.github.io/BabyMonitor/screenshot_02_baby_station_motion_zone.png",
+            "https://apadev232228-commits.github.io/BabyMonitor/screenshot_03_baby_station_live.png",
+            "https://apadev232228-commits.github.io/BabyMonitor/screenshot_04_parent_station.png"
+          ],
+          "description": "Private local Wi-Fi video and audio baby monitor for Android. Turn any spare smartphone into a nursery camera with zero cloud servers, no account required, custom crib motion zones, smart cry and noise alerts, Night Vision, Picture-in-Picture, Eco battery saver mode, and web browser viewing.",
+          "featureList": [
+            "100% private local Wi-Fi streaming with zero cloud uploads",
+            "Automatic local discovery & QR code quick pairing",
+            "Watch live in any web browser on Laptop, PC, Mac, iPad, or Smart TV",
+            "Custom Crib Motion Detection Zones (ROI)",
+            "Smart Cry & Adaptive Noise Alerts",
+            "Low-Light Night Vision & Soft Screen Nightlight",
+            "Picture-in-Picture (PiP) floating monitor window",
+            "Battery-saving Eco Mode & Remote Camera Flip / Zoom / Torch"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "apadev232228",
+            "email": "apadev232228@gmail.com"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does Baby Monitor for Parents work without internet?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Both devices only need to share the same local Wi-Fi router or a phone's personal Wi-Fi hotspot. Video and audio stream directly device-to-device inside your home network without needing external internet access."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is any baby video or audio uploaded to the cloud?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Never. The Baby Station runs a local server directly on your phone. Zero video frames, audio clips, or personal accounts are stored on or transmitted to any external cloud server."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I watch my baby monitor on a laptop, Mac, iPhone, or Smart TV?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. On the Baby Station screen, tap the Info (i) icon to see your local browser link (for example http://192.168.1.x:8080) or scan the QR code. Open that link in any browser on Windows, Mac, Linux, iPad, iPhone, or Smart TV."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there a monthly subscription required?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No monthly subscriptions at all. Core live Wi-Fi audio and video monitoring is free. Pro features such as Custom Motion Zones, Noise Alerts, Night Vision, and ad-free viewing can be unlocked for 12 hours anytime via a short rewarded video pass, or unlocked permanently with a one-time Lifetime Pro purchase."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do Custom Motion Detection Zones work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enable Motion Alerts on the Baby Station and drag the blue viewfinder brackets directly over your baby's crib or bed. The app monitors luminance changes only inside that custom zone, helping ignore moving curtains, pets, or ceiling fans elsewhere in the room."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-page: #F8F9FA;
+            --bg-surface: #FFFFFF;
+            --bg-card: #FAFBFC;
+            --bg-pill: #EAF3FD;
+            --border-subtle: #E2E8F0;
+            --text-primary: #1A1D29;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --blue: #4A90E2;
+            --blue-dark: #2E5C8A;
+            --blue-text: #1D5FA7;
+            --coral: #FF6B9D;
+            --coral-dark: #D63D74;
+            --green: #15803D;
+            --green-bg: #DCFCE7;
+            --shadow-sm: 0 2px 10px rgba(26, 29, 41, 0.06);
+            --shadow-lg: 0 18px 44px rgba(26, 29, 41, 0.12);
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --max-w: 1120px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-page: #121212;
+                --bg-surface: #1E1E1E;
+                --bg-card: #252525;
+                --bg-pill: rgba(107, 163, 232, 0.16);
+                --border-subtle: #333742;
+                --text-primary: #F1F5F9;
+                --text-secondary: #CBD5E1;
+                --text-muted: #94A3B8;
+                --blue: #6BA3E8;
+                --blue-dark: #4A90E2;
+                --blue-text: #8EC0F8;
+                --coral: #FF8FB3;
+                --coral-dark: #FF6B9D;
+                --green: #4ADE80;
+                --green-bg: rgba(74, 222, 128, 0.14);
+                --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.35);
+                --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.55);
+            }
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--blue-text);
+            text-decoration: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible {
+            outline: 3px solid var(--blue);
+            outline-offset: 3px;
+            border-radius: 8px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding-inline: 20px;
+        }
+
+        /* Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: color-mix(in srgb, var(--bg-page) 88%, transparent);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 68px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+
+        .brand img {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 24px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (min-width: 820px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        /* Play Store Button */
+        .btn-play {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #2E5C8A, #4A90E2);
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 20px;
+            border-radius: 999px;
+            box-shadow: 0 8px 20px rgba(74, 144, 226, 0.28);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            white-space: nowrap;
+        }
+
+        .btn-play:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 26px rgba(74, 144, 226, 0.36);
+        }
+
+        .btn-play-lg {
+            padding: 15px 28px;
+            font-size: 1.05rem;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 24px;
+            border-radius: 999px;
+            transition: border-color 0.18s ease, background-color 0.18s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 52px 0 64px;
+            background:
+                radial-gradient(640px 420px at 85% 10%, rgba(74, 144, 226, 0.12), transparent 70%),
+                radial-gradient(520px 360px at 10% 80%, rgba(255, 107, 157, 0.10), transparent 70%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 44px;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .hero {
+                padding: 72px 0 84px;
+            }
+            .hero-grid {
+                grid-template-columns: 1.15fr 0.85fr;
+                gap: 56px;
+            }
+        }
+
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: var(--bg-pill);
+            color: var(--blue-text);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .pill-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            font-size: clamp(2rem, 4.2vw, 3.15rem);
+            line-height: 1.14;
+            letter-spacing: -0.025em;
+        }
+
+        .hero-subtitle {
+            margin: 0 0 28px;
+            font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 58ch;
+        }
+
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .trust-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 22px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .trust-strip span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Hero Phones */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .phone-frame {
+            background: #14161F;
+            padding: 10px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            max-width: 265px;
+            width: 100%;
+        }
+
+        .phone-frame.secondary {
+            display: none;
+            max-width: 225px;
+            transform: translateY(18px);
+        }
+
+        @media (min-width: 540px) {
+            .phone-frame.secondary {
+                display: block;
+            }
+        }
+
+        .phone-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1080 / 2424;
+            border-radius: 22px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 64px 0;
+        }
+
+        .section-alt {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 42px;
+        }
+
+        .section-header h2 {
+            margin: 0 0 12px;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        /* Highlights Bar */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .highlight-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .highlight-item strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .highlight-item span {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 24px;
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            background: var(--bg-pill);
+            margin-bottom: 14px;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 8px;
+            font-size: 1.12rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pro-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: rgba(255, 107, 157, 0.16);
+            color: var(--coral-dark);
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Steps */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .step-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E5C8A, #4A90E2);
+            color: #FFFFFF;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+
+        .step-card h3 {
+            margin: 0 0 8px;
+            font-size: 1.1rem;
+        }
+
+        .step-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Screenshots Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px;
+            align-items: start;
+        }
+
+        .shot-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 18px;
+            text-align: center;
+        }
+
+        .shot-frame {
+            background: #14161F;
+            padding: 8px;
+            border-radius: 24px;
+            margin: 0 auto 16px;
+            max-width: 240px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .shot-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1080 / 2424;
+            border-radius: 17px;
+        }
+
+        .shot-card h3 {
+            margin: 0 0 6px;
+            font-size: 1.02rem;
+        }
+
+        .shot-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 780px;
+            margin: 0 auto;
+            display: grid;
+            gap: 12px;
+        }
+
+        details.faq-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 18px 22px;
+        }
+
+        details.faq-item summary {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.02rem;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        details.faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.faq-item summary::after {
+            content: "+";
+            font-size: 1.25rem;
+            color: var(--blue-text);
+            flex-shrink: 0;
+        }
+
+        details.faq-item[open] summary::after {
+            content: "−";
+        }
+
+        details.faq-item p {
+            margin: 12px 0 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Bottom CTA */
+        .bottom-cta {
+            background: linear-gradient(135deg, #2E5C8A, #4A90E2);
+            color: #FFFFFF;
+            border-radius: var(--radius-lg);
+            padding: 44px 28px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .bottom-cta h2 {
+            margin: 0 0 10px;
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+        }
+
+        .bottom-cta p {
+            margin: 0 auto 24px;
+            max-width: 56ch;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .bottom-cta .btn-play {
+            background: #FFFFFF;
+            color: #1A1D29;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 36px 0;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-row">
+            <a class="brand" href="#top">
+                <img src="./app-icon.png" alt="Baby Monitor for Parents app icon" width="38" height="38">
+                <span>Baby Monitor</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#faq">FAQ</a>
+                <a href="./privacy.html">Privacy Policy</a>
+            </nav>
+
+            <a class="btn-play"
+                href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor"
+                target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3.61 1.814L13.793 12 3.61 22.186a1.77 1.77 0 0 1-.61-1.35V3.164c0-.53.234-1.015.61-1.35zm11.27 11.272l2.742 2.743-10.916 6.237 8.174-8.98zm3.78-2.16l2.683 1.533c.876.5.876 1.582 0 2.082l-2.683 1.533-2.99-2.574 2.99-2.574zm-4.867.253L5.62 2.2l10.916 6.237-2.743 2.742z"/>
+                </svg>
+                <span>Google Play</span>
+            </a>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <div class="pill-badge">
+                        <span class="pill-dot" aria-hidden="true"></span>
+                        <span>100% Local Wi-Fi • No Cloud • No Subscriptions</span>
+                    </div>
+                    <h1>Turn Any Spare Phone Into a Private Wi-Fi Baby Monitor</h1>
+                    <p class="hero-subtitle">
+                        Watch and listen to your baby safely over your own home Wi-Fi or mobile hotspot. Use two Android phones, or view the live feed in any web browser on your laptop, Mac, iPad, or Smart TV — with zero cloud servers or sign-ups.
+                    </p>
+                    <div class="cta-group">
+                        <a class="btn-play btn-play-lg"
+                            href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M3.61 1.814L13.793 12 3.61 22.186a1.77 1.77 0 0 1-.61-1.35V3.164c0-.53.234-1.015.61-1.35zm11.27 11.272l2.742 2.743-10.916 6.237 8.174-8.98zm3.78-2.16l2.683 1.533c.876.5.876 1.582 0 2.082l-2.683 1.533-2.99-2.574 2.99-2.574zm-4.867.253L5.62 2.2l10.916 6.237-2.743 2.742z"/>
+                            </svg>
+                            <span>Get it on Google Play</span>
+                        </a>
+                        <a class="btn-secondary" href="#how-it-works">See How It Works</a>
+                    </div>
+                    <div class="trust-strip" aria-label="Key highlights">
+                        <span>✓ Free to Start</span>
+                        <span>✓ Works Offline on Local Wi-Fi</span>
+                        <span>✓ Android 7.0+ (Older &amp; New Phones)</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="phone-frame">
+                        <img src="./screenshot_02_baby_station_motion_zone.png"
+                            alt="Baby Station screen showing a sleeping baby inside a custom blue motion detection zone"
+                            width="1080" height="2424" fetchpriority="high" decoding="async">
+                    </div>
+                    <div class="phone-frame secondary">
+                        <img src="./screenshot_01_home_light.png"
+                            alt="Baby Monitor home screen with Baby Station and Parent Station buttons"
+                            width="1080" height="2424" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Highlights -->
+        <section class="section" aria-label="Privacy and convenience highlights">
+            <div class="container highlights-grid">
+                <div class="highlight-item">
+                    <strong>Zero Cloud Uploads</strong>
+                    <span>Video and audio stream strictly peer-to-peer inside your Wi-Fi network.</span>
+                </div>
+                <div class="highlight-item">
+                    <strong>No Monthly Subscriptions</strong>
+                    <span>Core monitoring is free. Unlock Pro features for 12h via a short ad or one-time lifetime upgrade.</span>
+                </div>
+                <div class="highlight-item">
+                    <strong>Watch on Any Browser</strong>
+                    <span>Open the local link in Chrome, Safari, or Edge on PC, Mac, iPhone, iPad, or Smart TV.</span>
+                </div>
+                <div class="highlight-item">
+                    <strong>Built for Travel &amp; Home</strong>
+                    <span>Works even without internet — just connect both phones to a Wi-Fi router or personal hotspot.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Everything Parents Need for Peace of Mind</h2>
+                    <p>Designed to run reliably overnight on both spare older Android phones and modern flagship devices.</p>
+                </div>
+
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📡</div>
+                        <h3>Instant Wi-Fi &amp; QR Pairing</h3>
+                        <p>Automatically discovers nearby Baby Stations on your local Wi-Fi, or pair in one second by scanning the on-screen QR code.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📏</div>
+                        <h3>Custom Motion Zones <span class="pro-tag">Pro</span></h3>
+                        <p>Drag viewfinder brackets directly over your baby's crib or bed so motion alerts focus on your child and ignore fans or curtains.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🔔</div>
+                        <h3>Smart Cry &amp; Noise Alerts <span class="pro-tag">Pro</span></h3>
+                        <p>Adaptive room-noise calibration learns your nursery's ambient sound floor and alerts the Parent Station when crying or loud sounds occur.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🌙</div>
+                        <h3>Night Vision &amp; Nightlight <span class="pro-tag">Pro</span></h3>
+                        <p>Boosts low-light camera visibility in dark rooms, with quick remote torch control (rear camera) or a gentle soft-screen nightlight (front camera).</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🪟</div>
+                        <h3>Picture-in-Picture (PiP)</h3>
+                        <p>Keep watching a compact floating live feed while browsing, texting, or working in other apps — complete with one-tap mute and live alert badges.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🔋</div>
+                        <h3>Eco Battery Saver &amp; Controls</h3>
+                        <p>Dim the nursery screen with Eco Mode for overnight use, plus double-tap lens flip, pinch/slider zoom, snapshots, mirror, and rotation controls.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Set Up in Under 60 Seconds</h2>
+                    <p>No registration, no email verification, and no complicated router configuration.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <h3>Join the Same Wi-Fi</h3>
+                        <p>Connect your nursery phone (even an old spare Android) and your parent device to the same home Wi-Fi or mobile hotspot.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <h3>Start Baby Station</h3>
+                        <p>Tap <strong>Baby Station</strong> on the nursery phone, position the camera facing the crib, and optionally set up your Motion Zone or Eco Mode.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <h3>Watch Anywhere Locally</h3>
+                        <p>Tap <strong>Parent Station</strong> on your own phone to auto-connect, scan the QR code, or open the local web URL in any browser.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section id="screenshots" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Real App Screenshots</h2>
+                    <p>Clean, clutter-free controls built for exhausted parents checking in during the night.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <figure class="shot-card">
+                        <div class="shot-frame">
+                            <img src="./screenshot_01_home_light.png"
+                                alt="Home screen showing Baby Station and Parent Station role selection cards"
+                                width="1080" height="2424" loading="lazy" decoding="async">
+                        </div>
+                        <h3>Simple Two-Role Setup</h3>
+                        <p>Choose Baby Station or Parent Station in a single tap with zero account creation.</p>
+                    </figure>
+
+                    <figure class="shot-card">
+                        <div class="shot-frame">
+                            <img src="./screenshot_02_baby_station_motion_zone.png"
+                                alt="Baby Station screen with adjustable crib motion detection zone box"
+                                width="1080" height="2424" loading="lazy" decoding="async">
+                        </div>
+                        <h3>Custom Crib Motion Zone</h3>
+                        <p>Resize the detection zone over the crib and toggle Night Vision, Sound Alerts, or Eco Mode.</p>
+                    </figure>
+
+                    <figure class="shot-card">
+                        <div class="shot-frame">
+                            <img src="./screenshot_03_baby_station_live.png"
+                                alt="Baby Station clean full-screen live video viewfinder with zoom and lens controls"
+                                width="1080" height="2424" loading="lazy" decoding="async">
+                        </div>
+                        <h3>Clean Live Camera Feed</h3>
+                        <p>Adjust zoom, flip between front and rear lenses, toggle flash, or share QR link to any browser.</p>
+                    </figure>
+
+                    <figure class="shot-card">
+                        <div class="shot-frame">
+                            <img src="./screenshot_04_parent_station.png"
+                                alt="Parent Station listing available Baby Station with live thumbnail preview and Connect button"
+                                width="1080" height="2424" loading="lazy" decoding="async">
+                        </div>
+                        <h3>Instant Local Discovery</h3>
+                        <p>Automatically finds your Baby Station on Wi-Fi with a live preview thumbnail and one-tap Connect.</p>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Answers to common questions about privacy, browser viewing, and overnight reliability.</p>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Does it work offline without an internet connection?</summary>
+                        <p>Yes! As long as both devices are on the same local Wi-Fi network (or one phone creates a personal Wi-Fi hotspot for the other), video and audio stream locally with no internet required.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is any video or audio uploaded to external servers?</summary>
+                        <p>No. Baby Monitor runs a local streaming server directly on the nursery phone inside your Wi-Fi network. No video, audio, or personal login data ever touches a cloud server.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I view the baby camera on my Mac, Windows PC, iPad, or Smart TV?</summary>
+                        <p>Yes. Tap the Info (i) icon on the Baby Station screen to copy or scan the local web dashboard address (such as <code>http://192.168.1.x:8080</code>) and open it in any web browser on the same Wi-Fi.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do I have to pay a monthly subscription?</summary>
+                        <p>Never. Core live streaming is free. Optional Pro features (Custom Motion Zones, Smart Noise Alerts, Night Vision, and ad-free viewing) can be unlocked free for 12 hours by watching one short rewarded video, or permanently with a single one-time Lifetime Pro upgrade.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Which Android devices are supported?</summary>
+                        <p>Baby Monitor for Parents supports Android 7.0 (API 24) and above, making it ideal for repurposing older spare Android phones alongside newer flagship devices.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section" aria-label="Download Baby Monitor for Parents">
+            <div class="container">
+                <div class="bottom-cta">
+                    <h2>Ready for Peaceful Nights?</h2>
+                    <p>Download Baby Monitor for Parents on Google Play today and set up a private local Wi-Fi nursery monitor in seconds.</p>
+                    <a class="btn-play btn-play-lg"
+                        href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M3.61 1.814L13.793 12 3.61 22.186a1.77 1.77 0 0 1-.61-1.35V3.164c0-.53.234-1.015.61-1.35zm11.27 11.272l2.742 2.743-10.916 6.237 8.174-8.98zm3.78-2.16l2.683 1.533c.876.5.876 1.582 0 2.082l-2.683 1.533-2.99-2.574 2.99-2.574zm-4.867.253L5.62 2.2l10.916 6.237-2.743 2.742z"/>
+                        </svg>
+                        <span>Download Free on Google Play</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <div>&copy; 2026 apadev232228 • Baby Monitor for Parents</div>
+            <div class="footer-links">
+                <a href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor" target="_blank" rel="noopener noreferrer">Google Play</a>
+                <a href="./privacy.html">Privacy Policy</a>
+                <a href="./privacy.html#deletion">Data Deletion</a>
+                <a href="mailto:apadev232228@gmail.com">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
