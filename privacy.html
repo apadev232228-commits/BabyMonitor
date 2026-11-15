@@ -4,112 +4,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Baby Monitor App</title>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#4A90E2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
+    <title>Privacy Policy — Baby Monitor for Parents</title>
+    <meta name="description"
+        content="Privacy Policy for Baby Monitor for Parents (apadev232228.babymonitor). 100% private local Wi-Fi peer-to-peer baby monitor with zero cloud servers.">
+    <meta name="author" content="apadev232228">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://apadev232228-commits.github.io/BabyMonitor/privacy.html">
+
+    <!-- Social / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Baby Monitor for Parents">
+    <meta property="og:title" content="Privacy Policy — Baby Monitor for Parents">
+    <meta property="og:description"
+        content="Zero cloud storage, peer-to-peer local Wi-Fi baby monitor. Read our transparent privacy and data safety policy.">
+    <meta property="og:url" content="https://apadev232228-commits.github.io/BabyMonitor/privacy.html">
+    <meta property="og:image" content="https://apadev232228-commits.github.io/BabyMonitor/app-icon.png">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy Policy — Baby Monitor for Parents">
+    <meta name="twitter:description" content="Zero cloud storage, peer-to-peer local Wi-Fi privacy policy.">
+    <meta name="twitter:image" content="https://apadev232228-commits.github.io/BabyMonitor/app-icon.png">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" type="image/png" sizes="192x192" href="./app-icon.png">
+    <link rel="apple-touch-icon" href="./app-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
+
     <style>
+        :root {
+            --bg-page: #F8F9FA;
+            --bg-surface: #FFFFFF;
+            --bg-card: #FAFBFC;
+            --bg-pill: #EAF3FD;
+            --border-subtle: #E2E8F0;
+            --text-primary: #1A1D29;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --blue: #4A90E2;
+            --blue-dark: #2E5C8A;
+            --blue-text: #1D5FA7;
+            --shadow-sm: 0 2px 10px rgba(26, 29, 41, 0.06);
+            --shadow-lg: 0 18px 44px rgba(26, 29, 41, 0.12);
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --max-w: 1120px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-page: #121212;
+                --bg-surface: #1E1E1E;
+                --bg-card: #252525;
+                --bg-pill: rgba(107, 163, 232, 0.16);
+                --border-subtle: #333742;
+                --text-primary: #F1F5F9;
+                --text-secondary: #CBD5E1;
+                --text-muted: #94A3B8;
+                --blue: #6BA3E8;
+                --blue-dark: #4A90E2;
+                --blue-text: #8EC0F8;
+                --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.35);
+                --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.55);
+            }
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--blue-text);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--blue);
+            outline-offset: 3px;
+            border-radius: 8px;
         }
 
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding-inline: 20px;
+        }
+
+        /* Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: color-mix(in srgb, var(--bg-page) 88%, transparent);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 68px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: clamp(0.95rem, 1.8vw, 1.12rem);
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .brand img {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .brand-highlight {
+            color: var(--blue-text);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 24px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (min-width: 820px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .btn-play {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #2E5C8A, #4A90E2);
+            color: #FFFFFF !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 10px 18px;
+            border-radius: 999px;
+            box-shadow: 0 6px 16px rgba(74, 144, 226, 0.28);
+            transition: transform 0.18s ease;
+            white-space: nowrap;
+            text-decoration: none !important;
+        }
+
+        .btn-play:hover {
+            transform: translateY(-1px);
+        }
+
+        /* Document Container */
+        .doc-section {
+            padding: 40px 0 60px;
+        }
+
+        .doc-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: clamp(24px, 4vw, 48px);
+            box-shadow: var(--shadow-sm);
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--blue-text);
         }
 
         h1 {
-            color: #2d5af0;
-            margin-top: 0;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            margin: 0 0 8px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-subtle);
         }
 
         h2 {
-            color: #444;
-            margin-top: 30px;
-            border-bottom: 2px solid #eef2ff;
-            padding-bottom: 10px;
+            font-size: 1.25rem;
+            margin: 32px 0 12px;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 8px;
         }
 
         p {
-            margin-bottom: 1.5em;
+            margin: 0 0 16px;
+            color: var(--text-secondary);
         }
 
         ul {
-            margin-bottom: 1.5em;
+            margin: 0 0 20px;
+            padding-left: 24px;
+            color: var(--text-secondary);
         }
 
         li {
-            margin-bottom: 0.5em;
+            margin-bottom: 8px;
         }
 
-        .footer {
-            margin-top: 40px;
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            padding: 2px 6px;
+            border-radius: 6px;
             font-size: 0.9em;
-            color: #888;
-            text-align: center;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 36px 0;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+
+        .disclaimer-text {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px dashed var(--border-subtle);
+            font-size: 0.78rem;
+            line-height: 1.55;
+            color: var(--text-muted);
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <p><a href="./" style="color:#2d5af0;font-weight:600;text-decoration:none;">&larr; Back to Baby Monitor for Parents</a></p>
-        <h1>Privacy Policy</h1>
-        <p><strong>Last Updated: March 22, 2026</strong></p>
+    <header class="site-header">
+        <div class="container nav-row">
+            <a class="brand" href="./index.html" aria-label="Baby Monitor for Parents home">
+                <img src="./app-icon.png" alt="Baby Monitor for Parents app icon" width="38" height="38">
+                <span>Baby Monitor <span class="brand-highlight">for Parents</span></span>
+            </a>
 
-        <p>This privacy policy applies to the <strong>Baby Monitor App</strong> (the "Application") for mobile devices,
-            created by apadev232228. This service is intended for use for monitoring infants within a local home network
-            environment.</p>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="./index.html#features">Features</a>
+                <a href="./index.html#how-it-works">How It Works</a>
+                <a href="./index.html#screenshots">Screenshots</a>
+                <a href="./index.html#faq">FAQ</a>
+                <a href="./privacy.html" style="color:var(--text-primary);font-weight:600;">Privacy Policy</a>
+            </nav>
 
-        <h2>1. Information We Collect (Local Only)</h2>
-        <p>The Application requires access to your device's <strong>Camera</strong> and <strong>Microphone</strong> to
-            function. This access is used solely to stream live audio and video to other devices within your own local
-            Wi-Fi network.</p>
-        <ul>
-            <li><strong>No Cloud Storage:</strong> Audio and video data are streamed directly peer-to-peer over your
-                local network.</li>
-            <li><strong>No Server Uploads:</strong> We do not upload, record, or store any of your audio or video data
-                on external servers.</li>
-        </ul>
-
-        <h2>2. Third-Party Services</h2>
-        <p>The Application uses third-party services that may collect information used to identify you:</p>
-        <ul>
-            <li><strong>Google Play Services:</strong> Required for application distribution and security.</li>
-            <li><strong>AdMob:</strong> Used to display advertisements. AdMob may collect and use data including your
-                device's advertising ID and limited location data to provide relevant ads.</li>
-            <li><strong>Google Play Billing:</strong> Used for processing Pro version upgrades. Payment information is
-                handled exclusively by Google; we do not store your credit card or billing details.</li>
-        </ul>
-
-        <h2>3. Local Network Usage</h2>
-        <p>The Application acts as a local MJPEG server. Data transmitted over your Wi-Fi network is unencrypted by
-            default (HTTP). We recommend using a password-protected, private home Wi-Fi network to ensure your local
-            stream is secure from unauthorized local access.</p>
-
-        <h2 id="deletion">4. Data Deletion & Retention</h2>
-        <p>We do not collect or retain personal data on our servers. Any settings or preferences are stored locally on
-            your device and can be cleared by uninstalling the application or clearing the app cache.</p>
-        <p>If you have any questions about your data or would like to request that any information associate with your
-            advertising ID be deleted (handled by AdMob), you may contact us at:
-            <strong>apadev232228@gmail.com</strong>. We will respond within 30 days to assist with your request.</p>
-
-        <h2>5. Your Consent</h2>
-        <p>By using the Application, you are consenting to our processing of your information as set forth in this
-            Privacy Policy now and as amended by us.</p>
-
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions regarding privacy while using the Application, or have questions about our
-            practices, please contact us via email at: <strong>apadev232228@gmail.com</strong></p>
-
-        <div class="footer">
-            &copy; 2026 apadev232228. All rights reserved.
+            <a class="btn-play"
+                href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor"
+                target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3.61 1.814L13.793 12 3.61 22.186a1.77 1.77 0 0 1-.61-1.35V3.164c0-.53.234-1.015.61-1.35zm11.27 11.272l2.742 2.743-10.916 6.237 8.174-8.98zm3.78-2.16l2.683 1.533c.876.5.876 1.582 0 2.082l-2.683 1.533-2.99-2.574 2.99-2.574zm-4.867.253L5.62 2.2l10.916 6.237-2.743 2.742z"/>
+                </svg>
+                <span>Google Play</span>
+            </a>
         </div>
-    </div>
+    </header>
+
+    <main class="doc-section">
+        <div class="container">
+            <article class="doc-card">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="./index.html">Home</a> &rsaquo; <span>Privacy Policy</span>
+                </nav>
+
+                <h1>Privacy Policy</h1>
+                <div class="last-updated">Last Updated: March 22, 2026 • Effective Date: March 22, 2026</div>
+
+                <p>This privacy policy applies to <strong>Baby Monitor for Parents</strong> (the "Application", package: <code>apadev232228.babymonitor</code>) for Android mobile devices, created by apadev232228. This service is designed for monitoring infants and toddlers securely within a local home network environment.</p>
+
+                <h2>1. Information We Collect (Local Only)</h2>
+                <p>The Application requires access to your device's <strong>Camera</strong> and <strong>Microphone</strong> to function. This access is used solely to stream live audio and video to other devices connected to your own local Wi-Fi network.</p>
+                <ul>
+                    <li><strong>No Cloud Storage:</strong> Audio and video data stream strictly peer-to-peer over your local Wi-Fi router or mobile hotspot.</li>
+                    <li><strong>No Server Uploads:</strong> We do not upload, record, or store any of your private baby audio or video feeds on external servers.</li>
+                </ul>
+
+                <h2>2. Third-Party Services</h2>
+                <p>The Application uses standard third-party services for app distribution and core support:</p>
+                <ul>
+                    <li><strong>Google Play Services:</strong> Required for application distribution, security, and integrity verification.</li>
+                    <li><strong>AdMob:</strong> Used to display advertisements in free mode. AdMob may collect and use data including your device's advertising ID and limited diagnostics to provide relevant ads.</li>
+                    <li><strong>Google Play Billing:</strong> Used for processing Pro version upgrades. Payment information is handled exclusively by Google Play; we do not collect or store your payment details.</li>
+                </ul>
+
+                <h2>3. Local Network Usage</h2>
+                <p>The Application acts as a local MJPEG video and PCM audio server directly on your device. Data transmitted over your local Wi-Fi network is unencrypted by default (HTTP). We recommend using a password-protected, private home Wi-Fi network to ensure your local stream is protected from unauthorized local access.</p>
+
+                <h2 id="deletion">4. Data Deletion &amp; Retention</h2>
+                <p>We do not collect or retain personal user accounts or video logs on external servers. Any preferences or settings are stored strictly locally on your device and can be erased immediately by uninstalling the app or clearing its storage in Android Settings.</p>
+                <p>If you have any questions about data or wish to request deletion of any diagnostics associated with your advertising ID (handled by AdMob), contact us at: <strong>apadev232228@gmail.com</strong>. We respond within 30 days.</p>
+
+                <h2>5. Your Consent</h2>
+                <p>By using the Application, you consent to our processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions regarding privacy while using the Application, please contact us via email at: <a href="mailto:apadev232228@gmail.com">apadev232228@gmail.com</a></p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <div>&copy; 2026 apadev232228 • Baby Monitor for Parents</div>
+            <div class="footer-links">
+                <a href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor" target="_blank" rel="noopener noreferrer">Google Play</a>
+                <a href="./privacy.html">Privacy Policy</a>
+                <a href="./privacy.html#deletion">Data Deletion</a>
+                <a href="./feedback.html">Anonymous Feedback</a>
+                <a href="mailto:apadev232228@gmail.com" title="apadev232228@gmail.com">Contact Support</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="disclaimer-text">
+                <small><strong>Notice &amp; Trademark Disclaimer:</strong> All product names, logos, brands, and registered trademarks (including Nanit, Owlet, CuboAi, Infant Optics, Eufy, VTech, Motorola, Dormi, Annie Baby Monitor, Cloud Baby Monitor, Bibino, Saby, and Nancy Baby Monitor) are the property of their respective owners. All company, product, and service names used on this website are strictly for identification and comparative reference under nominative fair use. Their use does not imply any affiliation, sponsorship, endorsement, or certification by their respective owners.</small>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

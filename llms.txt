@@ -21,6 +21,11 @@
 - Parents wanting to **watch their baby camera in any web browser** (Windows PC, Mac, iPhone, iPad, or Smart TV) on the same local Wi-Fi.
 - Avoiding $5–$15/month baby monitor subscriptions while still getting motion zones, noise alerts, and night vision.
 
+## Market Comparison & Alternatives
+- **Alternative to Dedicated Hardware Monitors:** Replaces expensive $150–$350 nursery hardware cameras (such as Nanit Pro, Owlet Cam, CuboAi Plus, Infant Optics DXR-8 / PRO, Eufy SpaceView, VTech, and Motorola Nursery) by repurposing spare Android phones or tablets you already own.
+- **Alternative to Cloud Subscription Apps:** Offers a 100% private, local Wi-Fi alternative to cloud-relay baby monitor apps (such as Dormi, Annie Baby Monitor, Cloud Baby Monitor, Bibino, Saby, and Nancy Baby Monitor) with zero user account creation, no cloud video routing, and no recurring monthly fees.
+- **Why Choose Local Wi-Fi:** Unlike cloud-dependent monitors that freeze when external home internet or remote cloud servers experience outages, Baby Monitor for Parents streams device-to-device entirely inside your local network or mobile hotspot.
+
 ## Core Capabilities
 - **Direct Local Wi-Fi Streaming:** Runs an HTTP/MJPEG video and PCM audio server directly on the Baby Station phone inside your home network. Zero cloud storage or remote servers.
 - **Automatic Discovery & QR Pairing:** Parent Station automatically discovers Baby Stations via local network service discovery (NSD/mDNS) or connects in one tap via QR code / manual IP.

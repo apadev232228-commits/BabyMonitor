@@ -32,6 +32,7 @@
     <meta property="og:image:width" content="540">
     <meta property="og:image:height" content="1212">
     <meta property="og:image:alt" content="Baby Monitor for Parents app showing custom crib motion detection zone">
+    <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Baby Monitor for Parents — Private Wi-Fi Baby Cam">
@@ -39,9 +40,12 @@
         content="Use two phones on your local Wi-Fi — no cloud, no login, no subscription. Custom motion zones, noise alerts &amp; watch on any browser.">
     <meta name="twitter:image" content="https://apadev232228-commits.github.io/BabyMonitor/preview_02.jpg">
 
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="icon" type="image/png" sizes="192x192" href="./app-icon.png">
     <link rel="apple-touch-icon" href="./app-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
     <link rel="alternate" type="text/markdown" title="LLM App Summary" href="./llms.txt">
+    <link rel="preload" as="image" href="./preview_02.jpg" fetchpriority="high">
 
     <!-- Structured Data: SoftwareApplication + FAQPage -->
     <script type="application/ld+json">
@@ -51,7 +55,7 @@
         {
           "@type": "SoftwareApplication",
           "name": "Baby Monitor for Parents",
-          "alternateName": "Baby Monitor Local Wi-Fi Cam",
+          "alternateName": ["BabyMonitor", "Baby Monitor Local Wi-Fi Cam"],
           "operatingSystem": "Android 7.0+",
           "applicationCategory": "LifestyleApplication",
           "applicationSubCategory": "Baby Monitor",
@@ -61,7 +65,7 @@
           ],
           "downloadUrl": "https://play.google.com/store/apps/details?id=apadev232228.babymonitor",
           "installUrl": "https://play.google.com/store/apps/details?id=apadev232228.babymonitor",
-          "softwareVersion": "1.1.0",
+          "softwareVersion": "1.2.1",
           "keywords": "free baby monitor app android, infant monitor, toddler camera, newborn baby cam, sleeping baby monitor, baby movement tracking, camera alert notifications, audio baby monitor, free wifi baby monitor, offline travel baby monitor, old android phone or tablet baby camera, private baby monitor no cloud, no subscription baby monitor, custom crib motion zone, browser baby monitor",
           "image": "https://apadev232228-commits.github.io/BabyMonitor/app-icon.png",
           "screenshot": [
@@ -134,6 +138,22 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Enable Motion Alerts on the Baby Station and drag the blue viewfinder brackets directly over your baby's crib or bed. The app monitors luminance changes only inside that custom zone, helping ignore moving curtains, pets, or ceiling fans elsewhere in the room."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does this compare to Nanit, Owlet, or apps like Dormi and Annie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dedicated nursery hardware like Nanit, Owlet, CuboAi, Infant Optics, Eufy, or VTech costs $150 to $350 upfront and often stops working if your external home internet or remote cloud servers drop. Cloud baby monitor apps like Dormi, Annie Baby Monitor, Cloud Baby Monitor, or Bibino stream private crib video over the public internet to third-party servers and charge recurring subscriptions. In contrast, Baby Monitor for Parents is free to start, uses a spare Android device you already own, requires no user accounts, and streams 100% offline over local Wi-Fi with zero cloud privacy risks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which Android phones and tablets are supported for overnight monitoring?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Baby Monitor for Parents supports Android 7.0 (API 24) and above, making it ideal for repurposing older spare Android phones or tablets for newborn, infant, and toddler monitoring. For overnight use, keep the Baby Station plugged into a charger and enable Eco Mode to dim the screen."
               }
             }
           ]
@@ -261,7 +281,7 @@
             align-items: center;
             gap: 12px;
             font-weight: 700;
-            font-size: 1.05rem;
+            font-size: clamp(0.95rem, 1.8vw, 1.12rem);
             color: var(--text-primary);
         }
 
@@ -270,6 +290,11 @@
             height: 38px;
             border-radius: 10px;
             display: block;
+        }
+
+        .brand-highlight {
+            color: var(--blue-text);
+            font-weight: 600;
         }
 
         .nav-links {
@@ -694,6 +719,41 @@
             color: var(--text-muted);
         }
 
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 860px;
+            margin: 28px auto 0;
+        }
+
+        @media (min-width: 680px) {
+            .compare-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .compare-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .compare-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+
+        .compare-card p {
+            margin: 0;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
         /* FAQ */
         .faq-list {
             max-width: 780px;
@@ -798,15 +858,24 @@
             color: var(--text-primary);
             text-decoration: underline;
         }
+
+        .disclaimer-text {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px dashed var(--border-subtle);
+            font-size: 0.78rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+        }
     </style>
 </head>
 
 <body>
     <header class="site-header">
         <div class="container nav-row">
-            <a class="brand" href="#top">
+            <a class="brand" href="#top" aria-label="Baby Monitor for Parents home">
                 <img src="./app-icon.png" alt="Baby Monitor for Parents app icon" width="38" height="38">
-                <span>Baby Monitor</span>
+                <span>Baby Monitor <span class="brand-highlight">for Parents</span></span>
             </a>
 
             <nav class="nav-links" aria-label="Primary navigation">
@@ -835,11 +904,11 @@
                 <div>
                     <div class="pill-badge">
                         <span class="pill-dot" aria-hidden="true"></span>
-                        <span>100% Local Wi-Fi • No Cloud • No Subscriptions</span>
+                        <span>Baby Monitor for Parents • 100% Local Wi-Fi</span>
                     </div>
-                    <h1>Turn Any Spare Phone Into a Private Wi-Fi Baby Monitor</h1>
+                    <h1>Baby Monitor for Parents: Turn Any Spare Phone Into a Private Nursery Cam</h1>
                     <p class="hero-subtitle">
-                        Keep an eye on your sleeping newborn, infant, or toddler using a spare Android phone or tablet as a private nursery camera and nanny cam. Streams live video and audio over local Wi-Fi or a mobile hotspot — even without internet — to your phone or any web browser.
+                        <strong>Baby Monitor for Parents</strong> turns your spare Android phone or tablet into a private, secure nursery camera and nanny cam. Keep an eye on your sleeping newborn, infant, or toddler with live video and audio streaming directly over local Wi-Fi or hotspot (even without internet) to your phone or any web browser.
                     </p>
                     <div class="cta-group">
                         <a class="btn-play btn-play-lg"
@@ -900,7 +969,7 @@
         <section id="features" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <h2>Everything Parents Need for Peace of Mind</h2>
+                    <h2>Everything Parents Need with Baby Monitor for Parents</h2>
                     <p>Designed to run reliably overnight on both spare older Android phones and modern flagship devices.</p>
                 </div>
 
@@ -948,7 +1017,7 @@
         <section id="how-it-works" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Set Up in Under 60 Seconds</h2>
+                    <h2>Set Up Baby Monitor for Parents in Under 60 Seconds</h2>
                     <p>No registration, no email verification, and no complicated router configuration.</p>
                 </div>
 
@@ -976,7 +1045,7 @@
         <section id="screenshots" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <h2>Real App Screenshots</h2>
+                    <h2>See Baby Monitor for Parents in Action</h2>
                     <p>Clean, clutter-free controls built for exhausted parents checking in during the night.</p>
                 </div>
 
@@ -1038,7 +1107,7 @@
                             <tr>
                                 <th scope="col">Feature</th>
                                 <th scope="col" class="col-ours">Baby Monitor for Parents</th>
-                                <th scope="col" class="col-other">Typical Cloud Baby Monitor Apps</th>
+                                <th scope="col" class="col-other">Cloud Apps &amp; Dedicated Hardware (Nanit, Owlet, Dormi)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1075,6 +1144,17 @@
                         </tbody>
                     </table>
                 </div>
+
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <h3>vs. $150–$350 Dedicated Hardware</h3>
+                        <p>Dedicated nursery cameras (such as <strong>Nanit Pro, Owlet Cam, CuboAi Plus, Infant Optics DXR-8 / PRO, Eufy SpaceView, VTech, and Motorola Nursery</strong>) require buying expensive single-purpose gadgets and often lock video replay behind $5–$15/month subscriptions. <strong>Baby Monitor for Parents</strong> turns a spare Android phone you already own into a full nursery monitor with zero hardware investment.</p>
+                    </div>
+                    <div class="compare-card">
+                        <h3>vs. Cloud-Relay Baby Monitor Apps</h3>
+                        <p>Apps like <strong>Dormi, Annie Baby Monitor, Cloud Baby Monitor, Bibino, Saby, and Nancy Baby Monitor</strong> stream private camera feeds through third-party cloud servers and require mandatory user accounts. <strong>Baby Monitor for Parents</strong> operates 100% peer-to-peer on your local Wi-Fi or mobile hotspot — keeping crib video and audio strictly inside your home.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1088,13 +1168,18 @@
 
                 <div class="faq-list">
                     <details class="faq-item">
+                        <summary>How does this compare to Nanit, Owlet, or apps like Dormi and Annie?</summary>
+                        <p>Dedicated nursery hardware like <strong>Nanit, Owlet, CuboAi, Infant Optics, Eufy, or VTech</strong> costs $150 to $350 upfront and often stops working if your external home internet or remote cloud servers drop. Cloud baby monitor apps like <strong>Dormi, Annie Baby Monitor, Cloud Baby Monitor, or Bibino</strong> stream private crib video over the public internet to third-party servers and charge recurring subscriptions. In contrast, <strong>Baby Monitor for Parents</strong> is free to start, uses a spare Android device you already own, requires no user accounts, and streams 100% offline over local Wi-Fi with zero cloud privacy risks.</p>
+                    </details>
+
+                    <details class="faq-item">
                         <summary>Does it work offline without an internet connection?</summary>
                         <p>Yes! As long as both devices are on the same local Wi-Fi network (or one phone creates a personal Wi-Fi hotspot for the other), video and audio stream locally with no internet required.</p>
                     </details>
 
                     <details class="faq-item">
                         <summary>Is any video or audio uploaded to external servers?</summary>
-                        <p>No. Baby Monitor runs a local streaming server directly on the nursery phone inside your Wi-Fi network. No video, audio, or personal login data ever touches a cloud server.</p>
+                        <p>No. Baby Monitor for Parents runs a local streaming server directly on the nursery phone inside your Wi-Fi network. No video, audio, or personal login data ever touches a cloud server.</p>
                     </details>
 
                     <details class="faq-item">
@@ -1143,6 +1228,11 @@
                 <a href="./privacy.html#deletion">Data Deletion</a>
                 <a href="./feedback.html">Anonymous Feedback</a>
                 <a href="mailto:apadev232228@gmail.com" title="apadev232228@gmail.com">Contact Support</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="disclaimer-text">
+                <small><strong>Notice &amp; Trademark Disclaimer:</strong> All product names, logos, brands, and registered trademarks (including Nanit, Owlet, CuboAi, Infant Optics, Eufy, VTech, Motorola, Dormi, Annie Baby Monitor, Cloud Baby Monitor, Bibino, Saby, and Nancy Baby Monitor) are the property of their respective owners. All company, product, and service names used on this website are strictly for identification and comparative reference under nominative fair use. Their use does not imply any affiliation, sponsorship, endorsement, or certification by their respective owners.</small>
             </div>
         </div>
     </footer>

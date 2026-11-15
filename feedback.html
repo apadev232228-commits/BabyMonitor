@@ -5,83 +5,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#4A90E2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
     <title>Anonymous Feedback — Baby Monitor for Parents</title>
-    <meta name="description" content="Send anonymous feedback or feature requests directly to the developer of Baby Monitor for Parents. 100% private in-app and web submission without account registration.">
+    <meta name="description"
+        content="Send anonymous feedback or feature requests directly to the developer of Baby Monitor for Parents. 100% private in-app and web submission without account registration.">
+    <meta name="author" content="apadev232228">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://apadev232228-commits.github.io/BabyMonitor/feedback.html">
+
+    <!-- Social / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Baby Monitor for Parents">
+    <meta property="og:title" content="Anonymous Feedback — Baby Monitor for Parents">
+    <meta property="og:description"
+        content="Send private feedback or feature suggestions directly to the developer of Baby Monitor for Parents. 100% private.">
+    <meta property="og:url" content="https://apadev232228-commits.github.io/BabyMonitor/feedback.html">
+    <meta property="og:image" content="https://apadev232228-commits.github.io/BabyMonitor/app-icon.png">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Anonymous Feedback — Baby Monitor for Parents">
+    <meta name="twitter:description" content="Send 100% private feedback directly to the developer.">
+    <meta name="twitter:image" content="https://apadev232228-commits.github.io/BabyMonitor/app-icon.png">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="icon" type="image/png" sizes="192x192" href="./app-icon.png">
     <link rel="apple-touch-icon" href="./app-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
+
     <style>
         :root {
-            --bg-color: #f7f9fc;
-            --card-bg: #ffffff;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --primary: #2563eb;
-            --primary-hover: #1d4ed8;
-            --border: #e2e8f0;
-            --input-bg: #ffffff;
-            --success: #16a34a;
+            --bg-page: #F8F9FA;
+            --bg-surface: #FFFFFF;
+            --bg-card: #FAFBFC;
+            --bg-pill: #EAF3FD;
+            --border-subtle: #E2E8F0;
+            --text-primary: #1A1D29;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --blue: #4A90E2;
+            --blue-dark: #2E5C8A;
+            --blue-text: #1D5FA7;
+            --green: #15803D;
+            --shadow-sm: 0 2px 10px rgba(26, 29, 41, 0.06);
+            --shadow-lg: 0 18px 44px rgba(26, 29, 41, 0.12);
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --max-w: 1120px;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #0f172a;
-                --card-bg: #1e293b;
-                --text-primary: #f8fafc;
-                --text-secondary: #94a3b8;
-                --primary: #3b82f6;
-                --primary-hover: #60a5fa;
-                --border: #334155;
-                --input-bg: #0f172a;
-                --success: #22c55e;
+                --bg-page: #121212;
+                --bg-surface: #1E1E1E;
+                --bg-card: #252525;
+                --bg-pill: rgba(107, 163, 232, 0.16);
+                --border-subtle: #333742;
+                --text-primary: #F1F5F9;
+                --text-secondary: #CBD5E1;
+                --text-muted: #94A3B8;
+                --blue: #6BA3E8;
+                --blue-dark: #4A90E2;
+                --blue-text: #8EC0F8;
+                --green: #4ADE80;
+                --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.35);
+                --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.55);
             }
         }
 
-        * {
+        *, *::before, *::after {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
             color: var(--text-primary);
             line-height: 1.6;
-            padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--blue-text);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid var(--blue);
+            outline-offset: 3px;
+            border-radius: 8px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding-inline: 20px;
+        }
+
+        /* Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: color-mix(in srgb, var(--bg-page) 88%, transparent);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-row {
             display: flex;
-            justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 68px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: clamp(0.95rem, 1.8vw, 1.12rem);
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .brand img {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .brand-highlight {
+            color: var(--blue-text);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 24px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (min-width: 820px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .btn-play {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #2E5C8A, #4A90E2);
+            color: #FFFFFF !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 10px 18px;
+            border-radius: 999px;
+            box-shadow: 0 6px 16px rgba(74, 144, 226, 0.28);
+            transition: transform 0.18s ease;
+            white-space: nowrap;
+            text-decoration: none !important;
+        }
+
+        .btn-play:hover {
+            transform: translateY(-1px);
+        }
+
+        /* Form Layout */
+        .feedback-section {
+            padding: 40px 0 60px;
         }
 
         .feedback-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 36px;
-            max-width: 540px;
-            width: 100%;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: clamp(24px, 4vw, 44px);
+            box-shadow: var(--shadow-sm);
+            max-width: 620px;
+            margin: 0 auto;
         }
 
-        .header {
-            margin-bottom: 24px;
+        .breadcrumb {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
         }
 
-        .header h1 {
-            font-size: 1.6rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
+        .breadcrumb a {
+            color: var(--blue-text);
         }
 
-        .header p {
+        .badge-kicker {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--blue-text);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+            margin: 0 0 10px;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .form-desc {
             font-size: 0.95rem;
             color: var(--text-secondary);
+            margin: 0 0 24px;
         }
 
         .form-group {
@@ -90,139 +249,232 @@
 
         label {
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             font-weight: 600;
             margin-bottom: 6px;
             color: var(--text-primary);
         }
 
         .hint {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-bottom: 6px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
         }
 
         textarea,
         input[type="text"],
         input[type="email"] {
             width: 100%;
-            padding: 12px 14px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            background-color: var(--input-bg);
+            padding: 13px 15px;
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+            background-color: var(--bg-card);
             color: var(--text-primary);
             font-family: inherit;
             font-size: 0.95rem;
             transition: border-color 0.15s ease, box-shadow 0.15s ease;
         }
 
+        textarea {
+            resize: vertical;
+            min-height: 130px;
+            line-height: 1.5;
+        }
+
         textarea:focus,
         input:focus {
             outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.18);
         }
 
-        textarea {
-            resize: vertical;
-            min-height: 120px;
+        .privacy-strip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-pill);
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            color: var(--blue-text);
+            font-weight: 500;
+            margin-bottom: 22px;
         }
 
         .btn-submit {
-            background-color: var(--primary);
-            color: #ffffff;
+            background: linear-gradient(135deg, #2E5C8A, #4A90E2);
+            color: #FFFFFF;
             border: none;
-            border-radius: 10px;
-            padding: 13px 20px;
-            font-size: 1rem;
-            font-weight: 600;
+            border-radius: 12px;
+            padding: 14px 24px;
+            font-size: 1.02rem;
+            font-weight: 700;
             width: 100%;
             cursor: pointer;
-            transition: background-color 0.15s ease;
+            box-shadow: 0 8px 20px rgba(74, 144, 226, 0.28);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
         }
 
-        .btn-submit:hover {
-            background-color: var(--primary-hover);
+        .btn-submit:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 24px rgba(74, 144, 226, 0.36);
         }
 
         .btn-submit:disabled {
-            opacity: 0.6;
+            opacity: 0.65;
             cursor: not-allowed;
-        }
-
-        .footer-links {
-            margin-top: 24px;
-            text-align: center;
-            font-size: 0.85rem;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.15s;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
         }
 
         .status-box {
             display: none;
             padding: 16px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            margin-bottom: 22px;
             font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         .status-success {
             background-color: rgba(34, 197, 94, 0.12);
-            color: var(--success);
-            border: 1px solid var(--success);
+            color: var(--green);
+            border: 1px solid var(--green);
         }
 
         .status-error {
             background-color: rgba(239, 68, 68, 0.12);
-            color: #ef4444;
-            border: 1px solid #ef4444;
+            color: #EF4444;
+            border: 1px solid #EF4444;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 36px 0;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+
+        .disclaimer-text {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px dashed var(--border-subtle);
+            font-size: 0.78rem;
+            line-height: 1.55;
+            color: var(--text-muted);
         }
     </style>
 </head>
 
 <body>
-    <div class="feedback-card">
-        <div class="header">
-            <h1>🛡️ Anonymous Feedback</h1>
-            <p>Tell us what went wrong or how we can improve. Your submission is 100% private and confidential.</p>
+    <header class="site-header">
+        <div class="container nav-row">
+            <a class="brand" href="./index.html" aria-label="Baby Monitor for Parents home">
+                <img src="./app-icon.png" alt="Baby Monitor for Parents app icon" width="38" height="38">
+                <span>Baby Monitor <span class="brand-highlight">for Parents</span></span>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="./index.html#features">Features</a>
+                <a href="./index.html#how-it-works">How It Works</a>
+                <a href="./index.html#screenshots">Screenshots</a>
+                <a href="./index.html#faq">FAQ</a>
+                <a href="./privacy.html">Privacy Policy</a>
+            </nav>
+
+            <a class="btn-play"
+                href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor"
+                target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3.61 1.814L13.793 12 3.61 22.186a1.77 1.77 0 0 1-.61-1.35V3.164c0-.53.234-1.015.61-1.35zm11.27 11.272l2.742 2.743-10.916 6.237 8.174-8.98zm3.78-2.16l2.683 1.533c.876.5.876 1.582 0 2.082l-2.683 1.533-2.99-2.574 2.99-2.574zm-4.867.253L5.62 2.2l10.916 6.237-2.743 2.742z"/>
+                </svg>
+                <span>Google Play</span>
+            </a>
         </div>
+    </header>
 
-        <div id="statusBox" class="status-box"></div>
+    <main class="feedback-section">
+        <div class="container">
+            <div class="feedback-card">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="./index.html">Home</a> &rsaquo; <span>Anonymous Feedback</span>
+                </nav>
 
-        <form id="feedbackForm">
-            <div class="form-group">
-                <label for="message">Feedback or Issue Description *</label>
-                <textarea id="message" name="message" required
-                    placeholder="Describe what happened, what device was used, or what feature you would love to see..."></textarea>
+                <div class="badge-kicker">Baby Monitor for Parents</div>
+                <h1>🛡️ Anonymous Feedback</h1>
+                <p class="form-desc">Have a bug to report or an idea for a new feature? Send feedback directly to the developer. Your submission is 100% private and confidential.</p>
+
+                <div id="statusBox" class="status-box"></div>
+
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="message">Feedback or Issue Description *</label>
+                        <textarea id="message" name="message" required
+                            placeholder="Describe what happened, what phone model was used, or what feature you would love to see in Baby Monitor for Parents..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="device">Device &amp; Android Version (Optional)</label>
+                        <div class="hint">Helps us troubleshoot hardware-specific glitches (e.g. Pixel 7, Galaxy S21, Android 14).</div>
+                        <input type="text" id="device" name="device" placeholder="e.g. Pixel 7 (Android 14) / Web Browser">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email (Optional)</label>
+                        <div class="hint">Leave empty to remain 100% anonymous. Only fill if you would like a personal reply.</div>
+                        <input type="email" id="email" name="email" placeholder="you@example.com (optional)">
+                    </div>
+
+                    <div class="privacy-strip">
+                        <span>🔒 100% Private • No user account or registration required</span>
+                    </div>
+
+                    <button type="submit" id="btnSubmit" class="btn-submit">Submit Feedback 🛡️</button>
+                </form>
             </div>
-
-            <div class="form-group">
-                <label for="device">Device &amp; Android Version (Optional)</label>
-                <div class="hint">Helps us troubleshoot hardware-specific glitches.</div>
-                <input type="text" id="device" name="device" placeholder="e.g. Pixel 7 (Android 14) / Web Browser">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Your Email (Optional)</label>
-                <div class="hint">Leave empty to remain 100% anonymous. Only fill if you'd like a personal reply.</div>
-                <input type="email" id="email" name="email" placeholder="you@example.com (optional)">
-            </div>
-
-            <button type="submit" id="btnSubmit" class="btn-submit">Submit Feedback 🛡️</button>
-        </form>
-
-        <div class="footer-links">
-            <a href="./index.html">← Back to Baby Monitor Home</a>
         </div>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <div>&copy; 2026 apadev232228 • Baby Monitor for Parents</div>
+            <div class="footer-links">
+                <a href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor" target="_blank" rel="noopener noreferrer">Google Play</a>
+                <a href="./privacy.html">Privacy Policy</a>
+                <a href="./privacy.html#deletion">Data Deletion</a>
+                <a href="./feedback.html">Anonymous Feedback</a>
+                <a href="mailto:apadev232228@gmail.com" title="apadev232228@gmail.com">Contact Support</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="disclaimer-text">
+                <small><strong>Notice &amp; Trademark Disclaimer:</strong> All product names, logos, brands, and registered trademarks (including Nanit, Owlet, CuboAi, Infant Optics, Eufy, VTech, Motorola, Dormi, Annie Baby Monitor, Cloud Baby Monitor, Bibino, Saby, and Nancy Baby Monitor) are the property of their respective owners. All company, product, and service names used on this website are strictly for identification and comparative reference under nominative fair use. Their use does not imply any affiliation, sponsorship, endorsement, or certification by their respective owners.</small>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Shared Google Apps Script Webhook URL (configured by developer)
@@ -258,7 +510,7 @@
                 // Submit to shared webhook
                 await fetch(WEBHOOK_URL, {
                     method: "POST",
-                    mode: "no-cors", // Google Apps Script handles no-cors cleanly
+                    mode: "no-cors",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(payload)
                 });
@@ -280,4 +532,3 @@
 </body>
 
 </html>
-
