@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#4A90E2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
+    <title>Connect to Baby Station — Baby Monitor for Parents</title>
+    <meta name="description"
+        content="Quickly connect your phone, tablet, laptop, or smart TV to your Baby Station camera over home Wi-Fi. 100% private, zero cloud, instant setup.">
+    <meta name="author" content="apadev232228">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://apadev232228-commits.github.io/BabyMonitor/connect.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Baby Monitor for Parents">
+    <meta property="og:title" content="Connect to Baby Station — Baby Monitor for Parents">
+    <meta property="og:description"
+        content="Instant Wi-Fi camera viewer. Connect from your Android phone or any web browser in seconds.">
+    <meta property="og:url" content="https://apadev232228-commits.github.io/BabyMonitor/connect.html">
+    <meta property="og:image" content="https://apadev232228-commits.github.io/BabyMonitor/app-icon.png">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="./app-icon.png">
+    <link rel="apple-touch-icon" href="./app-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <style>
+        :root {
+            --bg-page: #F8F9FA;
+            --bg-surface: #FFFFFF;
+            --bg-card: #FAFBFC;
+            --bg-pill: #EAF3FD;
+            --border-subtle: #E2E8F0;
+            --text-primary: #1A1D29;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --blue: #4A90E2;
+            --blue-dark: #2E5C8A;
+            --blue-text: #1D5FA7;
+            --green: #15803D;
+            --green-bg: #DCFCE7;
+            --shadow-sm: 0 2px 10px rgba(26, 29, 41, 0.06);
+            --shadow-lg: 0 18px 44px rgba(26, 29, 41, 0.12);
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --max-w: 780px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-page: #121212;
+                --bg-surface: #1E1E1E;
+                --bg-card: #252525;
+                --bg-pill: rgba(107, 163, 232, 0.16);
+                --border-subtle: #333742;
+                --text-primary: #F1F5F9;
+                --text-secondary: #CBD5E1;
+                --text-muted: #94A3B8;
+                --blue: #6BA3E8;
+                --blue-dark: #4A90E2;
+                --blue-text: #8EC0F8;
+                --green: #4ADE80;
+                --green-bg: rgba(74, 222, 128, 0.16);
+                --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.35);
+                --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.55);
+            }
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 16px 24px;
+        }
+
+        .header-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+        .brand img {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 500;
+            margin-left: 18px;
+            transition: color 0.15s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        main {
+            flex: 1;
+            max-width: var(--max-w);
+            width: 100%;
+            margin: 36px auto;
+            padding: 0 20px;
+        }
+
+        .card-gateway {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .badge-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background-color: var(--green-bg);
+            color: var(--green);
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--green);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 28px;
+        }
+
+        .station-details-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin-bottom: 30px;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 6px;
+            max-width: 100%;
+        }
+
+        .station-ip {
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--blue-text);
+        }
+
+        .station-pin {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .actions-group {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 22px;
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.98rem;
+            font-weight: 600;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            transition: background-color 0.15s ease, border-color 0.15s ease;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--border-subtle);
+        }
+
+        .features-grid {
+            margin-top: 36px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border-subtle);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            text-align: left;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-item span {
+            font-size: 1.15rem;
+            line-height: 1.2;
+        }
+
+        .network-notice {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background-color: var(--bg-card);
+            padding: 12px 18px;
+            border-radius: 12px;
+            border: 1px dashed var(--border-subtle);
+        }
+
+        footer {
+            background-color: var(--bg-surface);
+            border-top: 1px solid var(--border-subtle);
+            padding: 24px;
+            text-align: center;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--blue);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="./index.html" class="brand">
+                <img src="./app-icon.png" alt="Baby Monitor App Icon">
+                <span>Baby Monitor</span>
+            </a>
+            <nav class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./feedback.html">Feedback</a>
+                <a href="./privacy.html">Privacy</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="card-gateway">
+            <div class="badge-status" id="stationStatusBadge">
+                <span class="badge-dot"></span>
+                <span>Baby Station Ready on Home Wi-Fi</span>
+            </div>
+
+            <h1 id="gatewayTitle">Connect to Baby Station 👶</h1>
+            <p class="subtitle" id="gatewaySubtitle">
+                Watch and listen to your baby safely over your private local home network.
+            </p>
+
+            <div class="station-details-box" id="stationBox" style="display:none;">
+                <span class="station-ip" id="stationAddressDisplay">192.168.1.50:8080</span>
+                <span class="station-pin" id="stationPinDisplay">Protected with 4-digit PIN</span>
+            </div>
+
+            <!-- Dynamic Actions populated by JavaScript -->
+            <div class="actions-group" id="actionsContainer">
+                <a id="btnPrimaryAction" href="#" class="btn-primary">
+                    <span id="btnPrimaryIcon">📱</span>
+                    <span id="btnPrimaryLabel">Open in Baby Monitor App</span>
+                </a>
+
+                <a id="btnSecondaryAction" href="#" class="btn-secondary">
+                    <span id="btnSecondaryIcon">🌐</span>
+                    <span id="btnSecondaryLabel">Watch in Browser</span>
+                </a>
+            </div>
+
+            <div class="network-notice">
+                🔒 <strong>100% Private Local Stream:</strong> Video and audio never leave your house. Your viewing phone, tablet, or laptop must be on the <strong>same Wi-Fi network</strong> as the Baby Station phone.
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span>⚡</span>
+                    <div><strong>Zero-Lag Stream</strong><br>Direct peer-to-peer transmission over local Wi-Fi.</div>
+                </div>
+                <div class="feature-item">
+                    <span>🖼️</span>
+                    <div><strong>Picture-in-Picture</strong><br>Multitask on your phone while keeping an eye on baby.</div>
+                </div>
+                <div class="feature-item">
+                    <span>🔦</span>
+                    <div><strong>Remote Controls</strong><br>Toggle flashlight, night mode, and camera zoom.</div>
+                </div>
+                <div class="feature-item">
+                    <span>🛡️</span>
+                    <div><strong>Zero Cloud / No Login</strong><br>No account creation, passwords, or data collection.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Baby Monitor for Parents • 100% Offline & Private</p>
+        <p style="margin-top: 8px;">
+            <a href="./index.html">Home</a> •
+            <a href="./connect.html">Connect</a> •
+            <a href="./feedback.html">Feedback</a> •
+            <a href="./privacy.html">Privacy Policy</a> •
+            <a href="https://play.google.com/store/apps/details?id=apadev232228.babymonitor" target="_blank" rel="noopener">Google Play Store</a>
+        </p>
+    </footer>
+
+    <script>
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const ip = urlParams.get('ip') || '';
+            const port = urlParams.get('port') || '8080';
+            const pin = urlParams.get('pin') || '';
+
+            const isAndroid = /android/i.test(navigator.userAgent);
+            const isIOS = /ipad|iphone|ipod/i.test(navigator.userAgent);
+
+            const stationBox = document.getElementById('stationBox');
+            const stationAddressDisplay = document.getElementById('stationAddressDisplay');
+            const stationPinDisplay = document.getElementById('stationPinDisplay');
+
+            const btnPrimary = document.getElementById('btnPrimaryAction');
+            const btnPrimaryIcon = document.getElementById('btnPrimaryIcon');
+            const btnPrimaryLabel = document.getElementById('btnPrimaryLabel');
+
+            const btnSecondary = document.getElementById('btnSecondaryAction');
+            const btnSecondaryIcon = document.getElementById('btnSecondaryIcon');
+            const btnSecondaryLabel = document.getElementById('btnSecondaryLabel');
+
+            const playStoreUrl = "https://play.google.com/store/apps/details?id=apadev232228.babymonitor";
+
+            if (ip) {
+                // An active Baby Station IP was provided in the deep link
+                stationBox.style.display = 'inline-flex';
+                stationAddressDisplay.textContent = ip + ':' + port;
+                if (pin) {
+                    stationPinDisplay.textContent = '🔒 PIN protected';
+                    stationPinDisplay.style.display = 'block';
+                } else {
+                    stationPinDisplay.style.display = 'none';
+                }
+
+                const webViewerUrl = 'http://' + ip + ':' + port + (pin ? '/?pin=' + encodeURIComponent(pin) : '/');
+                const appDeepLinkUrl = 'intent://connect?ip=' + encodeURIComponent(ip) + 
+                                       '&port=' + encodeURIComponent(port) + 
+                                       (pin ? '&pin=' + encodeURIComponent(pin) : '') + 
+                                       '#Intent;scheme=babymonitor;package=apadev232228.babymonitor;' +
+                                       'S.browser_fallback_url=' + encodeURIComponent(playStoreUrl) + ';end';
+
+                if (isAndroid) {
+                    // Mobile Android: Primary is Native App, Secondary is Browser Viewer
+                    btnPrimary.href = appDeepLinkUrl;
+                    btnPrimaryIcon.textContent = '📱';
+                    btnPrimaryLabel.textContent = 'Open in Baby Monitor App';
+
+                    btnSecondary.href = webViewerUrl;
+                    btnSecondaryIcon.textContent = '🌐';
+                    btnSecondaryLabel.textContent = 'Watch in Chrome (Instant)';
+                } else {
+                    // Desktop / Laptop / Mac / iOS: Primary is Web Viewer, Secondary is Play Store link
+                    btnPrimary.href = webViewerUrl;
+                    btnPrimaryIcon.textContent = '🖥️';
+                    btnPrimaryLabel.textContent = 'Launch Web Baby Monitor';
+
+                    btnSecondary.href = playStoreUrl;
+                    btnSecondary.target = '_blank';
+                    btnSecondaryIcon.textContent = '📱';
+                    btnSecondaryLabel.textContent = 'Install Android App on Google Play';
+                }
+            } else {
+                // No IP supplied (e.g. general landing page or help reference)
+                document.getElementById('stationStatusBadge').textContent = 'ℹ️ How to Connect';
+                document.getElementById('gatewayTitle').textContent = 'Connect Devices to Baby Station';
+                document.getElementById('gatewaySubtitle').textContent = 'Start the Baby Station on one phone, tap Info (ℹ️) or Share to get your instant connection link.';
+
+                btnPrimary.href = playStoreUrl;
+                btnPrimary.target = '_blank';
+                btnPrimaryIcon.textContent = '⭐';
+                btnPrimaryLabel.textContent = 'Get Baby Monitor on Google Play';
+
+                btnSecondary.href = './index.html';
+                btnSecondaryIcon.textContent = '📖';
+                btnSecondaryLabel.textContent = 'View Setup Guide';
+            }
+        })();
+    </script>
+</body>
+</html>
