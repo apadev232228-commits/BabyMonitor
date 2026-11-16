@@ -1,0 +1,22 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "apadev232228.babymonitor",
+      "sha256_cert_fingerprints": [
+        "51:46:AC:A3:88:DA:7B:8E:56:15:D9:12:0F:EB:4D:F6:94:99:DC:93:0C:D5:8E:C6:4F:68:2B:1F:AD:5C:70:B8"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "apadev232228.babymonitor.debug",
+      "sha256_cert_fingerprints": [
+        "82:EB:29:81:2E:29:C8:94:81:9A:69:C6:27:A5:B0:8C:82:B7:5B:B0:66:F4:F9:99:4D:54:DD:7D:1E:3B:58:FE"
+      ]
+    }
+  }
+]
